@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:keiko_food/helper/themes.dart';
 import 'package:keiko_food/pages/home.dart';
+import 'package:keiko_food/pages/review_grid_photos.dart';
+import 'package:keiko_food/pages/review_list/review_list.dart';
+import 'package:keiko_food/pages/review_map_locations/review_map_locations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +20,12 @@ class MyApp extends StatelessWidget {
       darkTheme: Themes.darkTheme(),
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      routes: {
+        "/": (_) => const HomePage(),
+        "/review_grid_photos": (_) => const ReviewGridPhotos(),
+        "/review_list": (_) => const ReviewList(),
+        "/review_map_locations": (_) => const ReviewMapLocations(),
+      },
     );
   }
 }
