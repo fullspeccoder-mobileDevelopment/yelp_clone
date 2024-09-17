@@ -1,4 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:keiko_food/firebase_options.dart';
 import 'package:keiko_food/helper/themes.dart';
 import 'package:keiko_food/pages/authentication/user_forgot_password.dart';
 import 'package:keiko_food/pages/authentication/user_login.dart';
@@ -11,7 +13,9 @@ import 'package:keiko_food/pages/review_grid_photos.dart';
 import 'package:keiko_food/pages/review_list/review_list.dart';
 import 'package:keiko_food/pages/review_map_locations/review_map_locations.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
