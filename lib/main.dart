@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:keiko_food/helper/themes.dart';
+import 'package:keiko_food/pages/authentication/user_forgot_password.dart';
+import 'package:keiko_food/pages/authentication/user_login.dart';
+import 'package:keiko_food/pages/authentication/user_register.dart';
 import 'package:keiko_food/pages/home.dart';
+import 'package:keiko_food/pages/review_entry/review_entry_edit.dart';
+import 'package:keiko_food/pages/review_entry/review_entry_photo_zoom.dart';
+import 'package:keiko_food/pages/review_entry/review_entry_view.dart';
 import 'package:keiko_food/pages/review_grid_photos.dart';
 import 'package:keiko_food/pages/review_list/review_list.dart';
 import 'package:keiko_food/pages/review_map_locations/review_map_locations.dart';
@@ -25,6 +31,12 @@ class MyApp extends StatelessWidget {
         "/review_grid_photos": (_) => const ReviewGridPhotos(),
         "/review_list": (_) => const ReviewList(),
         "/review_map_locations": (_) => const ReviewMapLocations(),
+        '/user_login': (_) => const UserLogin(),
+        '/user_register': (_) => const UserRegister(),
+        '/user_forgot_password': (_) => const UserForgotPassword(),
+        '/review_entry_view': (_) => const ReviewEntryView(),
+        '/review_entry_edit': (_) => const ReviewEntryEdit(),
+        '/review_entry_photo_zoom': (_) => const ReviewEntryPhotoZoom(),
       },
     );
   }
